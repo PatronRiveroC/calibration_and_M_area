@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="Patron-Rivero, C." />
+
+<meta name="date" content="2025-01-01" />
+
+<title>Áreas de calibración y Ms</title>
+
+<script src="index_files/header-attrs-2.26/header-attrs.js"></script>
+<script src="index_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="index_files/bootstrap-3.3.5/css/journal.min.css" rel="stylesheet" />
+<script src="index_files/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="index_files/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="index_files/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="index_files/jqueryui-1.13.2/jquery-ui.min.js"></script>
+<link href="index_files/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="index_files/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="index_files/navigation-1.1/tabsets.js"></script>
+<link href="index_files/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="index_files/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Áreas de calibración y Ms</h1>
+<h4 class="author">Patron-Rivero, C.</h4>
+<h4 class="date">2025</h4>
+
+</div>
+
+
+<div id="repositorios"
+class="section level1 tabset tabset-fade tabset-pills">
+<h1 class="tabset tabset-fade tabset-pills">Repositorios</h1>
+<p>Base disponible en:</p>
+<p><a
+href="https://docs.google.com/spreadsheets/d/1PjsYxYvbF1rIagZKwfuehCEsfQPvOqMSRYtiF8ebZk8/edit?fbclid=IwZXh0bgNhZW0CMTAAAR1a8xPx3uBUsb74sQQobfiCjIpfdivZwX9KfcuTUYHBnTYb5LdO2PUs7-s_aem_f3z8u_E4LUbBd-SdGSv0qA&amp;gid=1543604024#gid=1543604024"
+class="uri">https://docs.google.com/spreadsheets/d/1PjsYxYvbF1rIagZKwfuehCEsfQPvOqMSRYtiF8ebZk8/edit?fbclid=IwZXh0bgNhZW0CMTAAAR1a8xPx3uBUsb74sQQobfiCjIpfdivZwX9KfcuTUYHBnTYb5LdO2PUs7-s_aem_f3z8u_E4LUbBd-SdGSv0qA&amp;gid=1543604024#gid=1543604024</a></p>
+<table style="width:100%;">
+<colgroup>
+<col width="0%" />
+<col width="12%" />
+<col width="0%" />
+<col width="14%" />
+<col width="3%" />
+<col width="21%" />
+<col width="5%" />
+<col width="19%" />
+<col width="21%" />
+<col width="1%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">Infomación.espacial.de.variables.ambientales</th>
+<th align="right">X</th>
+<th align="left">X.1</th>
+<th align="left">X.2</th>
+<th align="left">X.3</th>
+<th align="left">X.4</th>
+<th align="left">X.5</th>
+<th align="left">X.6</th>
+<th align="left">X.7</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">Tipo</td>
+<td align="right">NA</td>
+<td align="left">ID</td>
+<td align="left">Región</td>
+<td align="left">Descripción</td>
+<td align="left">Resolución espacial</td>
+<td align="left">Pagina web</td>
+<td align="left">Documentacion</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">2</td>
+<td align="left">Clima</td>
+<td align="right">1</td>
+<td align="left">EarthEnv</td>
+<td align="left">Global</td>
+<td align="left">Global 1-km Cloud Cover</td>
+<td align="left">1 km</td>
+<td align="left"><a href="http://www.earthenv.org/cloud"
+class="uri">http://www.earthenv.org/cloud</a></td>
+<td align="left"><a
+href="http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002415"
+class="uri">http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002415</a></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">3</td>
+<td align="left"></td>
+<td align="right">2</td>
+<td align="left">Clima</td>
+<td align="left">Sudamérica</td>
+<td align="left">Bioclim variables for Southern South America</td>
+<td align="left"></td>
+<td align="left"><a
+href="https://www.unil.ch/ecospat/home/menuguid/ecospat-resources/data.html"
+class="uri">https://www.unil.ch/ecospat/home/menuguid/ecospat-resources/data.html</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">28</td>
+<td align="left"></td>
+<td align="right">28</td>
+<td align="left">Global Aridity Index &amp; Potential
+Evapotranspiration</td>
+<td align="left">Global</td>
+<td align="left">Version 3 of the Global Aridity Index and Potential
+Evapotranspiration Database</td>
+<td align="left"></td>
+<td align="left"><a
+href="https://www.nature.com/articles/s41597-022-01493-1#data-availability"
+class="uri">https://www.nature.com/articles/s41597-022-01493-1#data-availability</a></td>
+<td align="left"><a
+href="https://www.nature.com/articles/s41597-022-01493-1"
+class="uri">https://www.nature.com/articles/s41597-022-01493-1</a></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">29</td>
+<td align="left"></td>
+<td align="right">29</td>
+<td align="left">Sequía</td>
+<td align="left">Global</td>
+<td align="left">Global Future Drought Layers (CMPI6)</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"><a
+href="https://www.nature.com/articles/s41597-025-04612-w"
+class="uri">https://www.nature.com/articles/s41597-025-04612-w</a></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">30</td>
+<td align="left"></td>
+<td align="right">30</td>
+<td align="left">MexHiResClimDB</td>
+<td align="left">MÉXICO</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"><a
+href="https://essd.copernicus.org/articles/17/6911/2025/"
+class="uri">https://essd.copernicus.org/articles/17/6911/2025/</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="formatos-y-resolución" class="section level1">
+<h1>Formatos y resolución</h1>
+<p>Raster: matriz de celdas (o píxeles) organizadas en filas y columnas
+en la que cada una contiene un valor que representa información</p>
+<p>Resolución: número de pixeles que se utilizan para construir un
+raster</p>
+<div id="resolución" class="section level2">
+<h2>Resolución</h2>
+<p><img src="index_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+</div>
+<div id="escala" class="section level2">
+<h2>Escala</h2>
+<pre class="r"><code>library(terra)
+
+setwd(&quot;D:/2026_ENM/Calibracion&quot;)
+m_10 &lt;- rast(&quot;./variables/elev_10.tif&quot;) # ~340 km2
+m_5 &lt;- rast(&quot;./variables/elev_5.tif&quot;)
+m_25 &lt;- rast(&quot;./variables/elev_2_5.tif&quot;) 
+s_30 &lt;- rast(&quot;./variables/elev_30.tif&quot;) # ~1 km2</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-4-1.png" width="672" /><img src="index_files/figure-html/unnamed-chunk-4-2.png" width="672" /><img src="index_files/figure-html/unnamed-chunk-4-3.png" width="672" /></p>
+</div>
+</div>
+<div id="cortar-variables" class="section level1">
+<h1>Cortar variables</h1>
+<div id="por-extent" class="section level2">
+<h2>Por extent</h2>
+<pre class="r"><code>library(terra)
+
+setwd(&quot;D:/2026_ENM/Calibracion/variables/set1&quot;)
+set1 &lt;- list.files(pattern = &quot;.tif&quot;)
+set1 &lt;- rast(set1)
+plot(set1)</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<pre class="r"><code>ext1 &lt;- ext(-91, -86, 18, 22)
+s1_e1 &lt;- crop(set1, ext1)
+plot(s1_e1)</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-5-2.png" width="672" /></p>
+</div>
+<div id="por-polygono-.shp" class="section level2">
+<h2>Por polygono (.shp)</h2>
+<pre class="r"><code>library(terra)
+
+ext2 &lt;- vect(&quot;D:/2026_ENM/Calibracion/shp/accessible_area_M.shp&quot;)
+plot(ext2)</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<pre class="r"><code>s1_e2 &lt;- crop(set1, ext2, mask = TRUE)
+plot(s1_e2)</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-6-2.png" width="672" /></p>
+</div>
+<div id="por-otro-raster" class="section level2">
+<h2>Por otro raster</h2>
+<pre class="r"><code>library(terra)
+
+plot(set1)</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<pre class="r"><code>e3 &lt;- s1_e2[[1]]
+plot(e3)</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-7-2.png" width="672" /></p>
+<pre class="r"><code>s1_e3 &lt;- crop(set1, e3, mask = TRUE)
+plot(s1_e3)</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-7-3.png" width="672" /></p>
+</div>
+</div>
+<div id="crear-área-de-calibración-y-m-sensu-soberón-peterson"
+class="section level1">
+<h1>Crear área de calibración y <strong>M</strong> (sensu Soberón &amp;
+Peterson)</h1>
+<p><a href="https://onlinelibrary.wiley.com/doi/10.1111/jbi.14834"
+class="uri">https://onlinelibrary.wiley.com/doi/10.1111/jbi.14834</a></p>
+<p><img src="Calib.jpg" width="614" /><img src="Calib2.jpg" width="356" /></p>
+<div id="buffers-capacidad-de-dispersión" class="section level2">
+<h2>Buffers / Capacidad de dispersión</h2>
+<pre class="r"><code>#if(!require(ellipsenm)){
+#    devtools::install_github(&quot;marlonecobos/ellipsenm&quot;)
+#}
+
+library(terra)
+library(ellipsenm)
+
+occ &lt;- read.csv(&quot;D:/2026_ENM/Calibracion/P_yuc.csv&quot;)
+head(occ)</code></pre>
+<pre><code>##   Species      Long      Lat     dtb
+## 1   P_yuc -89.01833 18.23667    gbif
+## 2   P_yuc -89.44000 18.51000    vnet
+## 3   P_yuc -89.43987 18.51069    gbif
+## 4   P_yuc -89.72500 19.46361    gbif
+## 5   P_yuc -89.72500 19.46361 dig_lit
+## 6   P_yuc -88.00796 19.51897    gbif</code></pre>
+<pre class="r"><code>buf_50 &lt;- buffer_area(data = occ, longitude = &quot;Long&quot;, latitude = &quot;Lat&quot;, buffer_distance = 50)
+
+buf_100 &lt;- buffer_area(data = occ, longitude = &quot;Long&quot;, latitude = &quot;Lat&quot;, buffer_distance = 100)</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<pre class="r"><code>buf_50 &lt;- vect(buf_50)
+b50 &lt;- crop(set1, buf_50, mask = TRUE)
+
+buf_100 &lt;- vect(buf_100)
+b100 &lt;- crop(set1, buf_100, mask = TRUE)</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-12-1.png" width="672" />
+# Sin elipsenm, directo con terra</p>
+<pre class="r"><code>library(terra)
+
+points &lt;- vect(occ, geom = c(&quot;Long&quot;, &quot;Lat&quot;), crs = &quot;EPSG:4326&quot;)
+
+points_m &lt;- project(points, &quot;EPSG:3395&quot;)  # usa metros
+
+buf_50m &lt;- aggregate(buffer(points_m, width = 50000))    # 50 km
+buf_100m &lt;- aggregate(buffer(points_m, width = 100000))  # 100 km
+
+buf_50 &lt;- project(buf_50m, &quot;EPSG:4326&quot;)
+buf_100 &lt;- project(buf_100m, &quot;EPSG:4326&quot;)
+
+b50 &lt;- crop(set1, buf_50, mask = TRUE)
+b100 &lt;- crop(set1, buf_100, mask = TRUE)
+
+plot(buf_100, border = &quot;red&quot;, col = NA)
+plot(buf_50, border = &quot;blue&quot;, col = NA, add = TRUE)
+plot(points, pch = 20, col = &quot;black&quot;, add = TRUE)</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+<p><img src="index_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
+</div>
+<div id="convex-hulls" class="section level2">
+<h2>Convex hulls</h2>
+<pre class="r"><code>library(sp)
+library(terra)
+
+ch &lt;- chull(occ[, 2:3])
+coords &lt;- occ[c(ch, ch[1]), ]
+
+plot(set1[[1]], ext = c(-95, -86, 15, 25))
+points(occ[, 2:3], pch = 3, add = TRUE)
+lines(coords[, 2:3], col=&quot;red&quot;, add = TRUE)</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<pre class="r"><code>ch_poly &lt;- SpatialPolygons(list(Polygons(list(Polygon(coords[2:3])), ID = 1)), proj4string = CRS(&quot;+proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0&quot;))
+
+ch_poly &lt;- vect(ch_poly)
+ch_M &lt;- crop(set1, ch_poly, mask = TRUE)
+
+plot(ch_M[[1]])
+plot(ch_poly, add = TRUE)
+points(occ[, 2:3], pch = 3)</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-15-2.png" width="672" /></p>
+</div>
+<div id="alpha-hulls" class="section level2">
+<h2>Alpha hulls</h2>
+<pre class="r"><code>library(terra)
+library(rangeBuilder)
+
+cro &lt;- crotalus[which(crotalus$genSp == &quot;Crotalus_atrox&quot;), ]
+cro &lt;- cro[sample(1:nrow(cro), 50), ]
+
+ahull &lt;- getDynamicAlphaHull(cro, coordHeaders = c(&quot;decimallongitude&quot;, &quot;decimallatitude&quot;), clipToCoast = &quot;terrestrial&quot;)
+ahull_sp &lt;- vect(ahull[[1]])
+
+ah_M &lt;- crop(set1, ahull_sp, mask = TRUE)
+
+plot(set1[[1]], ext = c(-116.8008, -95.8191, 24.56832, 36.73357))
+plot(ahull_sp, add = TRUE)
+points(cro[, c(&quot;decimallongitude&quot;, &quot;decimallatitude&quot;)], pch = 3)</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
+</div>
+<div id="presencia-en-un-polígono-ecorregiones-terrestres"
+class="section level2">
+<h2>Presencia en un polígono / Ecorregiones terrestres</h2>
+<p>Reinos, Provincias y Ecorregiones marinas</p>
+<p><a
+href="https://academic.oup.com/bioscience/article/57/7/573/238419?login=false"
+class="uri">https://academic.oup.com/bioscience/article/57/7/573/238419?login=false</a></p>
+<pre class="r"><code>library(terra)
+
+jjm &lt;- vect(&quot;D:/2026_ENM/Calibracion/ecoreg/Ecoregions2017.shp&quot;)
+occ1 &lt;- occ[, 2:3]
+occ2 &lt;- vect(as.matrix(occ1), type = &quot;points&quot;, crs = &quot;EPSG:4326&quot;)
+jjm_subset &lt;- jjm[occ2, ] 
+ecor &lt;- aggregate(jjm_subset)
+ecor_M &lt;- crop(set1, ecor, mask = TRUE)
+plot(ecor_M[[1]])
+plot(ecor, add = TRUE, border = &quot;blue&quot;, lwd = 2)
+points(occ1, pch = 3)</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
+</div>
+<div id="grinnel" class="section level2">
+<h2>Grinnel</h2>
+<p><a href="https://escholarship.org/uc/item/8hq04438"
+class="uri">https://escholarship.org/uc/item/8hq04438</a></p>
+<p><img src="grinnell1.jpg" width="872" /></p>
+<p><strong>Autómatas celulares</strong></p>
+<p><img src="grinnell2.jpg" width="287" /></p>
+<p><img src="grinnell3.jpg" width="346" /></p>
+<p><strong>NOTA:</strong> AQUÍ empiezan los problemas</p>
+<div id="python" class="section level3">
+<h3>Python</h3>
+<p>Es necesario descargar e instalar Python 3.9 (sólo esta versión)</p>
+<p><a href="https://www.python.org/downloads/release/python-3913/"
+class="uri">https://www.python.org/downloads/release/python-3913/</a></p>
+<pre class="r"><code>#library(remotes)
+#remotes::install_github(&quot;fmachados/grinnell&quot;)
+library(grinnell)
+library(raster)
+library(parallel)
+
+py.path &lt;- &quot;C:/Users/manol/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0&quot;
+
+Sys.setenv(PATH = paste(py.path, Sys.getenv()[&quot;PATH&quot;], sep = &quot;;&quot;))
+
+system(&quot;python --version&quot;)</code></pre>
+<pre><code>## [1] 0</code></pre>
+<pre class="r"><code>system(&quot;python -m pip install numpy&quot;)</code></pre>
+<pre><code>## [1] 0</code></pre>
+</div>
+<div id="registros-y-variables" class="section level3">
+<h3>Registros y variables</h3>
+<pre class="r"><code>occ &lt;- &quot;E:/5_Curso_ENM/2025/P_6/env_data/P_arc.csv&quot;
+cu &lt;- &quot;E:/5_Curso_ENM/2025/P_6/env_data/current&quot;
+# Pleistocene: Last Glacial Maximum (ca. 21 ka)
+past &lt;- &quot;E:/5_Curso_ENM/2025/P_6/env_data/past_lgm&quot;
+
+#dir.create(&quot;E:/5_Curso_ENM/2025/P_6/env_data/sim&quot;)
+odir1 &lt;- &quot;E:/5_Curso_ENM/2025/P_6/env_data/sim&quot;</code></pre>
+</div>
+<div id="configurar-la-simulación" class="section level3">
+<h3>Configurar la simulación</h3>
+<p><strong>‘kernel_spread’</strong> distancia en pixeles al pixel
+original (2 = 24 pixeles)</p>
+<p><strong>‘max_dispersers’</strong> número de disperciones aceptadas
+por cada evento de dispersión (6 = 1/4 de las posibilidades)</p>
+<p><strong>‘replicates’</strong> número de réplicas para calcular S
+(cada réplica inicia con un “starting population” diferente)</p>
+<p><strong>‘dispersal_events’</strong> número de eventos de dispersión a
+lo largo de tu ST (20 eventos por año X n ka)</p>
+<p><strong>‘simulation_period’</strong> tiempo que dura la simulación
+(unidad en miles de años). 21 porque nuestra primera variable es de hace
+21 ka</p>
+<p><strong>‘stable_lgm’</strong> tiempo en el que el mis condiciones en
+el pasado se mantienen.</p>
+<p><strong>‘transition_to_lgm’</strong> Tiempo de transición entre el
+periodo en el pasado al presente. 3 ka</p>
+<p><strong>‘lgm_to_current’</strong> Tiempo total del pasado hasta el
+presente. 21 ka</p>
+<p><strong>‘stable_current’</strong> Total de tiempo en el que las
+condiciones ambientales en el presente han estado estables. Alrededor de
+2 ka</p>
+<p><strong>‘scenario_span’</strong> Total de tiempo desde el pasado
+hasta el presente. 21 ka al presente y 2 ka del actual = 23.</p>
+<pre class="r"><code>M_simulation(data = occ, current_variables = cu,
+             project = TRUE, projection_variables = past,
+             kernel_spread = 2, max_dispersers = 6,
+             replicates = 5, dispersal_events = 420,
+             simulation_period = 21, stable_lgm = 10,
+             transition_to_lgm = 3, lgm_to_current = 21,
+             stable_current = 2, scenario_span = 23,
+             output_directory = odir1)</code></pre>
+</div>
+<div id="resultados" class="section level3">
+<h3>Resultados</h3>
+<p>Construye un enm con mve</p>
+<p><img src="grinnell4.jpg" width="536" /></p>
+<p>Simula</p>
+<pre class="r"><code>library(raster)
+library(rgdal)
+
+setwd(&quot;E:/5_Curso_ENM/2025/P_6/env_data/sim&quot;)
+shp &lt;- readOGR(&quot;./accessible_area_M.shp&quot;)
+
+m_disp &lt;- raster(&quot;./A_mean_S1.asc&quot;)
+m_disp1 &lt;- mask(crop(m_disp, shp), shp)
+
+v_disp &lt;- raster(&quot;./A_var_S1.asc&quot;)
+v_disp1 &lt;- mask(crop(v_disp, shp), shp)
+
+par(mfrow = c(1, 2))
+plot(m_disp1, main = &quot;Mean of Dispersal Simulated&quot;)
+plot(shp, add = TRUE)
+plot(v_disp1, main = &quot;Variance of Dispersal Simulated&quot;)
+plot(shp, add = TRUE)</code></pre>
+<p><img src="grinnell5.jpg" width="682" /></p>
+<p>Con datos a 7 escenarios al pasado</p>
+<pre class="r"><code>library(raster)
+library(rgdal)
+
+setwd(&quot;E:/5_Curso_ENM/2025/P_6/env_data/P_arc&quot;)
+
+d1 &lt;- vect(&quot;./p1&quot;, &quot;accessible_area_M&quot;)
+d2 &lt;- vect(&quot;./p2&quot;, &quot;accessible_area_M&quot;)
+d3 &lt;- vect(&quot;./p3&quot;, &quot;accessible_area_M&quot;)
+d4 &lt;- vect(&quot;./p4&quot;, &quot;accessible_area_M&quot;)
+d5 &lt;- vect(&quot;./p5&quot;, &quot;accessible_area_M&quot;)
+d6 &lt;- vect(&quot;./p6&quot;, &quot;accessible_area_M&quot;)
+d7 &lt;- vect(&quot;./p7&quot;, &quot;accessible_area_M&quot;)
+
+par(mfrow = c(2, 4))
+plot(d1, main = &quot;Current ditribution&quot;)
+plot(d2, main = &quot;8.326 - 4.2 ka&quot;)
+plot(d3, main = &quot;11.7 - 8.326 ka&quot;)
+plot(d4, main = &quot;12.9 - 11.7 ka&quot;)
+plot(d5, main = &quot;14.7 - 12.9 ka&quot;)
+plot(d6, main = &quot;17.0 - 14.7 ka&quot;)
+plot(d7, main = &quot;Glacial Maximum ca.
+21 ka&quot;)</code></pre>
+<p><img src="grinnell6.jpg" width="639" /></p>
+</div>
+</div>
+</div>
+<div id="guardar-nuestros-resultados" class="section level1">
+<h1>Guardar nuestros resultados</h1>
+<pre class="r"><code>library(raster)
+
+ecor_M &lt;- raster::stack(ecor_M)
+
+setwd(&quot;D:/2026_ENM/Calibracion/variables/ecor&quot;)
+writeRaster(ecor_M, filename = names(ecor_M), bylayer = T, format = &quot;GTiff&quot;, overwrite = TRUE)</code></pre>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
